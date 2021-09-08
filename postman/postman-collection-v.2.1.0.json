@@ -1,0 +1,3835 @@
+{
+  "info": {
+    "name": "Test",
+    "_postman_id": "d2516336-bc92-4a64-9f76-2d58c873ec51",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "description": "admin APIs",
+      "item": [
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "getuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuser_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde496\",\n    \"_id\": \"61360642665a2120b8fde496\",\n    \"createdAt\": \"2022-01-30T16:43:19.554Z\",\n    \"updatedAt\": \"2022-07-11T22:54:07.502Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde494\",\n    \"_id\": \"61360642665a2120b8fde494\",\n    \"createdAt\": \"2022-02-28T07:24:34.946Z\",\n    \"updatedAt\": \"2021-12-24T12:27:43.485Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAlluser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"firstName\": \"Leo Satterfield DDS\",\n        \"lastName\": \"Roman O'Keefe\",\n        \"name\": \"Dr. Miriam Kerluke\",\n        \"username\": \"Sidney Lakin\",\n        \"password\": \"WpVrB4rzBzQEGCL\",\n        \"email\": \"Misael_Stamm@yahoo.com\",\n        \"addedby\": \"61360642665a2120b8fde492\",\n        \"role\": 1,\n        \"id\": \"61360642665a2120b8fde495\",\n        \"createdAt\": \"2022-05-11T03:21:10.648Z\",\n        \"updatedAt\": \"2022-08-24T03:53:20.451Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"61360642665a2120b8fde495\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuserCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1,\n      \"id\": \"61360642665a2120b8fde499\",\n      \"_id\": \"61360642665a2120b8fde499\",\n      \"createdAt\": \"2022-01-13T05:33:36.093Z\",\n      \"updatedAt\": \"2021-11-17T09:25:35.296Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde497\",\n    \"_id\": \"61360642665a2120b8fde497\",\n    \"createdAt\": \"2022-02-23T19:59:01.869Z\",\n    \"updatedAt\": \"2022-05-24T12:54:50.469Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde498\",\n    \"_id\": \"61360642665a2120b8fde498\",\n    \"createdAt\": \"2022-03-22T00:41:56.255Z\",\n    \"updatedAt\": \"2021-12-15T00:42:57.278Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/softDeleteMany",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/softDeleteMany",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/updateBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/updateBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1,\n      \"id\": \"61360642665a2120b8fde49a\",\n      \"_id\": \"61360642665a2120b8fde49a\",\n      \"createdAt\": \"2022-01-23T19:32:24.645Z\",\n      \"updatedAt\": \"2021-12-14T18:20:52.393Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateProfile",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/update-profile",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "update-profile"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateProfileuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/update-profile",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "update-profile"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1,\n      \"id\": \"61360642665a2120b8fde49b\",\n      \"_id\": \"61360642665a2120b8fde49b\",\n      \"createdAt\": \"2022-06-12T01:30:26.225Z\",\n      \"updatedAt\": \"2022-02-02T11:57:16.651Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "admin Login",
+          "item": [
+            {
+              "name": "Login in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/login",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Login in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/login",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde49c\",\n    \"_id\": \"61360642665a2120b8fde49c\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"createdAt\": \"2022-03-21T21:43:30.837Z\",\n    \"updatedAt\": \"2022-02-12T01:28:29.054Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/register",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Register User in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/register",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde49c\",\n    \"_id\": \"61360642665a2120b8fde49c\",\n    \"loginRetryLimit\": 0,\n    \"createdAt\": \"2021-09-12T05:12:08.728Z\",\n    \"updatedAt\": \"2021-10-03T04:13:45.898Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/forgot-password",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Forgot Password in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/forgot-password",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "forgot-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"otp successfully send to your email.\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/validate-otp",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "validate-otp"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Validate OTP in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/validate-otp",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate-otp"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Invalid OTP\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/change-password",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "change-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"oldPassword\": \"YourOldPassword\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Change Password in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/change-password",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "change-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Password changed successfully\",\n  \"data\": {}\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/reset-password",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "reset-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Reset password in admin_response~",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/reset-password",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Password reset successfully\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "Blog",
+          "description": "Blog Model APIs",
+          "item": [
+            {
+              "name": "getBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getBlog_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4aa\",\n    \"_id\": \"61360642665a2120b8fde4aa\",\n    \"createdAt\": \"2021-09-16T17:04:46.438Z\",\n    \"updatedAt\": \"2022-05-08T20:27:15.231Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Account\",\n  \"alternativeHeadline\": \"hierarchy\",\n  \"image\": \"Cambridgeshire\",\n  \"publishDate\": \"circuit\",\n  \"author\": {\n    \"name\": \"Marie Grant\",\n    \"image\": \"Account\",\n    \"email\": \"Henderson57@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Johnny McGlynn\",\n    \"url\": \"National\",\n    \"logo\": \"Refined\"\n  },\n  \"articleSection\": \"Metal\",\n  \"articleBody\": \"Product\",\n  \"description\": \"moratorium\",\n  \"slug\": \"olive\",\n  \"url\": \"Toys\",\n  \"isDraft\": false,\n  \"addedby\": \"61360642665a2120b8fde4a6\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4a8\",\n    \"_id\": \"61360642665a2120b8fde4a8\",\n    \"createdAt\": \"2021-09-15T06:18:34.155Z\",\n    \"updatedAt\": \"2022-02-24T21:43:26.270Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAllBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Account\",\n        \"alternativeHeadline\": \"hierarchy\",\n        \"image\": \"Cambridgeshire\",\n        \"publishDate\": \"circuit\",\n        \"author\": {\n          \"name\": \"Marie Grant\",\n          \"image\": \"Account\",\n          \"email\": \"Henderson57@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Johnny McGlynn\",\n          \"url\": \"National\",\n          \"logo\": \"Refined\"\n        },\n        \"articleSection\": \"Metal\",\n        \"articleBody\": \"Product\",\n        \"description\": \"moratorium\",\n        \"slug\": \"olive\",\n        \"url\": \"Toys\",\n        \"isDraft\": false,\n        \"addedby\": \"61360642665a2120b8fde4a6\",\n        \"id\": \"61360642665a2120b8fde4a9\",\n        \"createdAt\": \"2022-08-17T01:48:06.119Z\",\n        \"updatedAt\": \"2021-09-12T03:24:12.841Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"61360642665a2120b8fde4a9\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getBlogCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getBlogCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Account\",\n      \"alternativeHeadline\": \"hierarchy\",\n      \"image\": \"Cambridgeshire\",\n      \"publishDate\": \"circuit\",\n      \"author\": {\n        \"name\": \"Marie Grant\",\n        \"image\": \"Account\",\n        \"email\": \"Henderson57@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Johnny McGlynn\",\n        \"url\": \"National\",\n        \"logo\": \"Refined\"\n      },\n      \"articleSection\": \"Metal\",\n      \"articleBody\": \"Product\",\n      \"description\": \"moratorium\",\n      \"slug\": \"olive\",\n      \"url\": \"Toys\",\n      \"isDraft\": false,\n      \"addedby\": \"61360642665a2120b8fde4a6\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Account\",\n      \"alternativeHeadline\": \"hierarchy\",\n      \"image\": \"Cambridgeshire\",\n      \"publishDate\": \"circuit\",\n      \"author\": {\n        \"name\": \"Marie Grant\",\n        \"image\": \"Account\",\n        \"email\": \"Henderson57@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Johnny McGlynn\",\n        \"url\": \"National\",\n        \"logo\": \"Refined\"\n      },\n      \"articleSection\": \"Metal\",\n      \"articleBody\": \"Product\",\n      \"description\": \"moratorium\",\n      \"slug\": \"olive\",\n      \"url\": \"Toys\",\n      \"isDraft\": false,\n      \"addedby\": \"61360642665a2120b8fde4a6\",\n      \"id\": \"61360642665a2120b8fde4ad\",\n      \"_id\": \"61360642665a2120b8fde4ad\",\n      \"createdAt\": \"2022-06-02T09:35:15.048Z\",\n      \"updatedAt\": \"2022-05-29T22:58:27.475Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Account\",\n  \"alternativeHeadline\": \"hierarchy\",\n  \"image\": \"Cambridgeshire\",\n  \"publishDate\": \"circuit\",\n  \"author\": {\n    \"name\": \"Marie Grant\",\n    \"image\": \"Account\",\n    \"email\": \"Henderson57@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Johnny McGlynn\",\n    \"url\": \"National\",\n    \"logo\": \"Refined\"\n  },\n  \"articleSection\": \"Metal\",\n  \"articleBody\": \"Product\",\n  \"description\": \"moratorium\",\n  \"slug\": \"olive\",\n  \"url\": \"Toys\",\n  \"isDraft\": false,\n  \"addedby\": \"61360642665a2120b8fde4a6\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4ab\",\n    \"_id\": \"61360642665a2120b8fde4ab\",\n    \"createdAt\": \"2022-05-20T13:15:56.096Z\",\n    \"updatedAt\": \"2022-05-17T03:49:20.135Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4ac\",\n    \"_id\": \"61360642665a2120b8fde4ac\",\n    \"createdAt\": \"2021-11-27T21:22:45.310Z\",\n    \"updatedAt\": \"2022-05-10T21:26:22.099Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/softDeleteMany",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/softDeleteMany",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/blog/updateBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "blog",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/blog/updateBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "blog",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Account\",\n      \"alternativeHeadline\": \"hierarchy\",\n      \"image\": \"Cambridgeshire\",\n      \"publishDate\": \"circuit\",\n      \"author\": {\n        \"name\": \"Marie Grant\",\n        \"image\": \"Account\",\n        \"email\": \"Henderson57@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Johnny McGlynn\",\n        \"url\": \"National\",\n        \"logo\": \"Refined\"\n      },\n      \"articleSection\": \"Metal\",\n      \"articleBody\": \"Product\",\n      \"description\": \"moratorium\",\n      \"slug\": \"olive\",\n      \"url\": \"Toys\",\n      \"isDraft\": false,\n      \"addedby\": \"61360642665a2120b8fde4a6\",\n      \"id\": \"61360642665a2120b8fde4ae\",\n      \"_id\": \"61360642665a2120b8fde4ae\",\n      \"createdAt\": \"2021-11-28T15:36:03.611Z\",\n      \"updatedAt\": \"2022-07-14T03:45:36.485Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hax04",
+      "description": "Hax04 APIs",
+      "item": [
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "getuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuser_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde49f\",\n    \"_id\": \"61360642665a2120b8fde49f\",\n    \"createdAt\": \"2021-12-19T01:49:18.046Z\",\n    \"updatedAt\": \"2021-11-09T21:06:14.495Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/create",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/create",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde49d\",\n    \"_id\": \"61360642665a2120b8fde49d\",\n    \"createdAt\": \"2022-02-15T11:13:35.194Z\",\n    \"updatedAt\": \"2022-06-20T23:03:04.884Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/list",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAlluser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/list",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"firstName\": \"Leo Satterfield DDS\",\n        \"lastName\": \"Roman O'Keefe\",\n        \"name\": \"Dr. Miriam Kerluke\",\n        \"username\": \"Sidney Lakin\",\n        \"password\": \"WpVrB4rzBzQEGCL\",\n        \"email\": \"Misael_Stamm@yahoo.com\",\n        \"addedby\": \"61360642665a2120b8fde492\",\n        \"role\": 1,\n        \"id\": \"61360642665a2120b8fde49e\",\n        \"createdAt\": \"2022-05-13T09:01:09.235Z\",\n        \"updatedAt\": \"2022-08-05T18:19:28.782Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"61360642665a2120b8fde49e\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/count",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuserCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/count",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/aggregate",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/addBulk",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/addBulk",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1,\n      \"id\": \"61360642665a2120b8fde4a2\",\n      \"_id\": \"61360642665a2120b8fde4a2\",\n      \"createdAt\": \"2021-09-09T22:40:01.080Z\",\n      \"updatedAt\": \"2022-07-06T05:09:21.407Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/update/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/update/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde4a0\",\n    \"_id\": \"61360642665a2120b8fde4a0\",\n    \"createdAt\": \"2021-09-23T02:34:07.769Z\",\n    \"updatedAt\": \"2021-12-25T12:48:54.540Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/partial-update/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/partial-update/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde4a1\",\n    \"_id\": \"61360642665a2120b8fde4a1\",\n    \"createdAt\": \"2022-03-30T21:16:34.387Z\",\n    \"updatedAt\": \"2022-05-03T08:09:29.878Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/softDelete/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/softDelete/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/softDeleteMany",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/softDeleteMany",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/updateBulk",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/updateBulk",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1,\n      \"id\": \"61360642665a2120b8fde4a3\",\n      \"_id\": \"61360642665a2120b8fde4a3\",\n      \"createdAt\": \"2022-03-20T22:54:45.867Z\",\n      \"updatedAt\": \"2022-07-26T08:26:25.550Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateProfile",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/update-profile",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "update-profile"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateProfileuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/update-profile",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "update-profile"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"firstName\": \"Leo Satterfield DDS\",\n      \"lastName\": \"Roman O'Keefe\",\n      \"name\": \"Dr. Miriam Kerluke\",\n      \"username\": \"Sidney Lakin\",\n      \"password\": \"WpVrB4rzBzQEGCL\",\n      \"email\": \"Misael_Stamm@yahoo.com\",\n      \"addedby\": \"61360642665a2120b8fde492\",\n      \"role\": 1,\n      \"id\": \"61360642665a2120b8fde4a4\",\n      \"_id\": \"61360642665a2120b8fde4a4\",\n      \"createdAt\": \"2021-12-06T03:18:11.245Z\",\n      \"updatedAt\": \"2022-07-02T06:16:52.931Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "Hax04 Login",
+          "item": [
+            {
+              "name": "Login in Hax04",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/auth/login",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Login in Hax04_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/auth/login",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde4a5\",\n    \"_id\": \"61360642665a2120b8fde4a5\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"createdAt\": \"2022-04-02T02:31:44.411Z\",\n    \"updatedAt\": \"2022-03-26T07:39:37.881Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in Hax04",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/auth/register",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"Leo Satterfield DDS\",\n  \"lastName\": \"Roman O'Keefe\",\n  \"name\": \"Dr. Miriam Kerluke\",\n  \"username\": \"Sidney Lakin\",\n  \"password\": \"WpVrB4rzBzQEGCL\",\n  \"email\": \"Misael_Stamm@yahoo.com\",\n  \"addedby\": \"61360642665a2120b8fde492\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Register User in Hax04_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/auth/register",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"firstName\": \"Leo Satterfield DDS\",\n    \"lastName\": \"Roman O'Keefe\",\n    \"name\": \"Dr. Miriam Kerluke\",\n    \"username\": \"Sidney Lakin\",\n    \"password\": \"WpVrB4rzBzQEGCL\",\n    \"email\": \"Misael_Stamm@yahoo.com\",\n    \"addedby\": \"61360642665a2120b8fde492\",\n    \"role\": 1,\n    \"id\": \"61360642665a2120b8fde4a5\",\n    \"_id\": \"61360642665a2120b8fde4a5\",\n    \"loginRetryLimit\": 0,\n    \"createdAt\": \"2022-08-20T07:04:50.257Z\",\n    \"updatedAt\": \"2022-04-22T10:16:15.867Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in Hax04",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/auth/forgot-password",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Forgot Password in Hax04_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/auth/forgot-password",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "auth",
+                        "forgot-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"otp successfully send to your email.\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in Hax04",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/auth/validate-otp",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "auth",
+                    "validate-otp"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Validate OTP in Hax04_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/auth/validate-otp",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate-otp"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Invalid OTP\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in Hax04",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/user/change-password",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "change-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"oldPassword\": \"YourOldPassword\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Change Password in Hax04_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/user/change-password",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "change-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Password changed successfully\",\n  \"data\": {}\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in Hax04",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/auth/reset-password",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "auth",
+                    "reset-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Reset password in Hax04_response~",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/auth/reset-password",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Password reset successfully\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "Blog",
+          "description": "Blog Model APIs",
+          "item": [
+            {
+              "name": "getBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getBlog_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4b1\",\n    \"_id\": \"61360642665a2120b8fde4b1\",\n    \"createdAt\": \"2022-06-17T12:42:46.916Z\",\n    \"updatedAt\": \"2021-09-18T14:19:34.500Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/create",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Account\",\n  \"alternativeHeadline\": \"hierarchy\",\n  \"image\": \"Cambridgeshire\",\n  \"publishDate\": \"circuit\",\n  \"author\": {\n    \"name\": \"Marie Grant\",\n    \"image\": \"Account\",\n    \"email\": \"Henderson57@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Johnny McGlynn\",\n    \"url\": \"National\",\n    \"logo\": \"Refined\"\n  },\n  \"articleSection\": \"Metal\",\n  \"articleBody\": \"Product\",\n  \"description\": \"moratorium\",\n  \"slug\": \"olive\",\n  \"url\": \"Toys\",\n  \"isDraft\": false,\n  \"addedby\": \"61360642665a2120b8fde4a6\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/create",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4af\",\n    \"_id\": \"61360642665a2120b8fde4af\",\n    \"createdAt\": \"2022-02-25T22:47:22.834Z\",\n    \"updatedAt\": \"2022-07-29T12:50:41.351Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/list",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAllBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/list",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Account\",\n        \"alternativeHeadline\": \"hierarchy\",\n        \"image\": \"Cambridgeshire\",\n        \"publishDate\": \"circuit\",\n        \"author\": {\n          \"name\": \"Marie Grant\",\n          \"image\": \"Account\",\n          \"email\": \"Henderson57@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Johnny McGlynn\",\n          \"url\": \"National\",\n          \"logo\": \"Refined\"\n        },\n        \"articleSection\": \"Metal\",\n        \"articleBody\": \"Product\",\n        \"description\": \"moratorium\",\n        \"slug\": \"olive\",\n        \"url\": \"Toys\",\n        \"isDraft\": false,\n        \"addedby\": \"61360642665a2120b8fde4a6\",\n        \"id\": \"61360642665a2120b8fde4b0\",\n        \"createdAt\": \"2022-02-15T20:46:12.116Z\",\n        \"updatedAt\": \"2022-02-19T18:30:03.928Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"61360642665a2120b8fde4b0\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getBlogCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/count",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getBlogCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/count",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/aggregate",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/addBulk",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Account\",\n      \"alternativeHeadline\": \"hierarchy\",\n      \"image\": \"Cambridgeshire\",\n      \"publishDate\": \"circuit\",\n      \"author\": {\n        \"name\": \"Marie Grant\",\n        \"image\": \"Account\",\n        \"email\": \"Henderson57@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Johnny McGlynn\",\n        \"url\": \"National\",\n        \"logo\": \"Refined\"\n      },\n      \"articleSection\": \"Metal\",\n      \"articleBody\": \"Product\",\n      \"description\": \"moratorium\",\n      \"slug\": \"olive\",\n      \"url\": \"Toys\",\n      \"isDraft\": false,\n      \"addedby\": \"61360642665a2120b8fde4a6\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/addBulk",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Account\",\n      \"alternativeHeadline\": \"hierarchy\",\n      \"image\": \"Cambridgeshire\",\n      \"publishDate\": \"circuit\",\n      \"author\": {\n        \"name\": \"Marie Grant\",\n        \"image\": \"Account\",\n        \"email\": \"Henderson57@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Johnny McGlynn\",\n        \"url\": \"National\",\n        \"logo\": \"Refined\"\n      },\n      \"articleSection\": \"Metal\",\n      \"articleBody\": \"Product\",\n      \"description\": \"moratorium\",\n      \"slug\": \"olive\",\n      \"url\": \"Toys\",\n      \"isDraft\": false,\n      \"addedby\": \"61360642665a2120b8fde4a6\",\n      \"id\": \"61360642665a2120b8fde4b4\",\n      \"_id\": \"61360642665a2120b8fde4b4\",\n      \"createdAt\": \"2021-10-31T20:54:14.275Z\",\n      \"updatedAt\": \"2022-08-21T09:15:49.627Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/update/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Account\",\n  \"alternativeHeadline\": \"hierarchy\",\n  \"image\": \"Cambridgeshire\",\n  \"publishDate\": \"circuit\",\n  \"author\": {\n    \"name\": \"Marie Grant\",\n    \"image\": \"Account\",\n    \"email\": \"Henderson57@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Johnny McGlynn\",\n    \"url\": \"National\",\n    \"logo\": \"Refined\"\n  },\n  \"articleSection\": \"Metal\",\n  \"articleBody\": \"Product\",\n  \"description\": \"moratorium\",\n  \"slug\": \"olive\",\n  \"url\": \"Toys\",\n  \"isDraft\": false,\n  \"addedby\": \"61360642665a2120b8fde4a6\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/update/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4b2\",\n    \"_id\": \"61360642665a2120b8fde4b2\",\n    \"createdAt\": \"2022-01-26T15:12:43.692Z\",\n    \"updatedAt\": \"2022-05-29T02:06:34.514Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/partial-update/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/partial-update/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Account\",\n    \"alternativeHeadline\": \"hierarchy\",\n    \"image\": \"Cambridgeshire\",\n    \"publishDate\": \"circuit\",\n    \"author\": {\n      \"name\": \"Marie Grant\",\n      \"image\": \"Account\",\n      \"email\": \"Henderson57@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Johnny McGlynn\",\n      \"url\": \"National\",\n      \"logo\": \"Refined\"\n    },\n    \"articleSection\": \"Metal\",\n    \"articleBody\": \"Product\",\n    \"description\": \"moratorium\",\n    \"slug\": \"olive\",\n    \"url\": \"Toys\",\n    \"isDraft\": false,\n    \"addedby\": \"61360642665a2120b8fde4a6\",\n    \"id\": \"61360642665a2120b8fde4b3\",\n    \"_id\": \"61360642665a2120b8fde4b3\",\n    \"createdAt\": \"2021-12-27T12:20:42.214Z\",\n    \"updatedAt\": \"2022-07-16T23:40:35.994Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/softDelete/:id",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/softDelete/:id",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/softDeleteMany",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/softDeleteMany",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}hax04/api/v1/blog/updateBulk",
+                  "host": [
+                    "{{url}}hax04"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}hax04/api/v1/blog/updateBulk",
+                      "host": [
+                        "{{url}}hax04"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Account\",\n      \"alternativeHeadline\": \"hierarchy\",\n      \"image\": \"Cambridgeshire\",\n      \"publishDate\": \"circuit\",\n      \"author\": {\n        \"name\": \"Marie Grant\",\n        \"image\": \"Account\",\n        \"email\": \"Henderson57@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Johnny McGlynn\",\n        \"url\": \"National\",\n        \"logo\": \"Refined\"\n      },\n      \"articleSection\": \"Metal\",\n      \"articleBody\": \"Product\",\n      \"description\": \"moratorium\",\n      \"slug\": \"olive\",\n      \"url\": \"Toys\",\n      \"isDraft\": false,\n      \"addedby\": \"61360642665a2120b8fde4a6\",\n      \"id\": \"61360642665a2120b8fde4b5\",\n      \"_id\": \"61360642665a2120b8fde4b5\",\n      \"createdAt\": \"2021-12-16T00:39:16.216Z\",\n      \"updatedAt\": \"2022-03-11T14:50:56.539Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
